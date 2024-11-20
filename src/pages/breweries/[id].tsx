@@ -14,7 +14,6 @@ import "./style.css";
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import Link from 'next/link';
-import { database } from "./database";
 
 export type Brewery = {
   name: string;
@@ -29,6 +28,82 @@ export type Brewery = {
 interface PageProps {
   brewery: Brewery;
 }
+
+
+export const database: Record<string, Brewery> = {
+  "cervejaria-aguia-dourada": {
+    name: "Cervejaria Águia Dourada",
+    brewmaster: "João Mendes",
+    description: "Fundada no coração de Pernambuco em 2017, a Cervejaria Águia Dourada rapidamente se destacou no cenário das cervejas artesanais...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["IPA Sertão Vivo", "Stout Sertão Vivo", "Cachaça Sol do Agreste"],
+  },
+  "brewmasters-do-sol": {
+    name: "Brewmasters do Sol",
+    brewmaster: "Ana Silva",
+    description: "Fundada sob o calor tropical de Pernambuco em 2018, a Brewmasters do Sol rapidamente se tornou um símbolo da revolução das cervejas artesanais na região...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["IPA Solar", "Lager Litorânea", "Cachaça Aurora Tropical"],
+  },
+  "espuma-dos-deuses": {
+    name: "Espuma dos Deuses",
+    brewmaster: "Carlos Eduardo",
+    description: "Fundada na rica tradição cervejeira de Pernambuco, a Espuma dos Deuses rapidamente se tornou um símbolo da inovação e da paixão pelas cervejas artesanais...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["Pilsen Tropical", "Stout do Sertão", "Cachaça Artesanal de Engenho"],
+  },
+  "lupulo-feliz": {
+    name: "Lúpulo Feliz",
+    brewmaster: "Mariana Costa",
+    description: "Fundada no coração de Pernambuco em 2017, a Lúpulo Feliz rapidamente se tornou um símbolo da revolução das cervejas artesanais na região...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["IPA Tropical", "Stout de Mandioca", "Cana do Chefe"],
+  },
+  "cervejaria-rio-cristalino": {
+    name: "Cervejaria Rio Cristalino",
+    brewmaster: "Patrícia Faria",
+    description: "Fundada na pitoresca região de Pernambuco em 2020, a Cervejaria Rio Cristalino rapidamente se tornou um marco na revolução das cervejas artesanais no Brasil...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["Pilsen Cristal", "Gin Tropicália", "Vodka Artesanal"],
+  },
+  "mestres-da-cerveja": {
+    name: "Mestres da Cerveja",
+    brewmaster: "Eduardo Pereira",
+    description: "Fundada no coração de Pernambuco em 2015, a Mestres da Cerveja emergiu como uma pioneira no cenário das cervejas artesanais...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["Pilsen Tropical", "Gin Oceânico", "Vodka Artesanal"],
+  },
+  "barley-brothers": {
+    name: "Barley Brothers",
+    brewmaster: "Fernanda Gomes",
+    description: "Fundada na vibrante cena de cervejas artesanais de Pernambuco em 2018, a Barley Brothers rapidamente se destacou com sua abordagem inovadora...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["Pilsen Tropical", "Stout do Sertão", "Linha de destilados locais"],
+  },
+  "cervejaria-lago-azul": {
+    name: "Cervejaria Lago Azul",
+    brewmaster: "Roberto Nascimento",
+    description: "A Cervejaria Lago Azul, estabelecida em 2020 em Pernambuco, emergiu como um ícone da inovação no cenário das cervejas artesanais...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["Pilsen Tropical", "Cachaça Azul Marinho"],
+  },
+  "trigo-e-companhia": {
+    name: "Trigo e Companhia",
+    brewmaster: "Luciana Alves",
+    description: "Trigo e Companhia, estabelecida em 2016, floresceu em harmonia com o crescente apreço pelas cervejas artesanais em Pernambuco...",
+    latitude: -35.0,
+    longitude: -8.0,
+    beers: ["Pernambuco Weiss", "IPA Tropical", "Cachaça Canavial"],
+  },
+};
 
 export default function Page(data: PageProps) {
 
