@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .properties-wrapper{
+    
+    @apply flex text-black w-full gap-3 align-top max-w-64 items-center;
+  }
+  .properties-info{
+    @apply max-w-[400px] h-min;
+  }
+  .properties-wrapper img{
+    @apply w-12 h-12;
+  }
+  .properties-info h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply font-bold p-0 m-0 text-left uppercase;
+  }
+  .properties-info p{
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply font-normal normal-case;
+  }
+  .properties-info h1,.properties-info p{
+    @apply text-black text-sm flex-1;
+  }
+}

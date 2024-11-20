@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .carousel {
+        --slide-height: 19rem;
+        --slide-spacing: 0.2rem;
+        --slide-size: 30%;
+        @apply container mx-auto relative;
+        @apply after:content-['_'] after:absolute after:z-10 after:h-full after:w-[var(--caroucel-shadow-size,180px)] after:top-0 after:right-0 after:bg-shadow-left after:bottom-0;
+        /* before */
+        @apply before:content-['_'] before:absolute before:z-10 before:h-full before:w-[var(--caroucel-shadow-size,180px)] before:top-0 before:left-0 before:bg-shadow-right after:bottom-0;
+      }
+      .carousel-viewport {
+        overflow: hidden;
+      }
+      .carousel-container {
+        backface-visibility: hidden;
+        display: flex;
+        touch-action: pan-y pinch-zoom;
+        margin-left: calc(var(--slide-spacing) * -1);
+      }
+
+      .carousel-slide {
+        flex: 0 0 var(--slide-size);
+        min-width: 0;
+        padding-left: var(--slide-spacing);
+        opacity: 0.5;
+        transition: all 0.5 ease-in-out;
+      }
+      .carousel-slide:hover{
+        opacity: 1;
+      }
+      .carousel-slide-picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--slide-height);
+      }
+      
+}

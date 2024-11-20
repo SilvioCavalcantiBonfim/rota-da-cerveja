@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .header-wrapper{
+    @apply relative flex bg-black bg-cover bg-left-top justify-center h-screen w-full bg-no-repeat text-white;
+    @apply after:absolute after:content-['_'] after:bg-shadow-bottom after:w-full after:h-[40%] after:z-10; 
+    @apply before:absolute before:content-['_'] before:bg-shadow-top before:w-full before:h-[40%] before:z-30 before:bottom-0; 
+  }
+
+  .header-container-glass{
+    /* sm */
+    @apply absolute bg-cover bg-no-repeat h-[calc(100vh-3.5rem)] right-0 aspect-half-glass -bottom-2 z-20;
+    /* md */
+    @apply md:h-[calc(100vh-5rem)];
+    /* lg */
+    @apply lg:bg-contain lg:aspect-glass;
+    /*landscape*/
+    @apply landscape:lg:right-[10%]; 
+    /* portrait */
+    @apply portrait:h-[100hw] portrait:lg:bg-[length:200%_auto] portrait:lg:aspect-half-glass;
+  }
+
+  .header-container{
+    /* sm */
+    @apply container p-4 pt-14 h-5/6 flex flex-col justify-between;
+    /* md */
+    @apply md:pt-20;
+    /* lg */
+    @apply landscape:lg:w-[calc(100vw-2.5rem)] lg:pt-8 landscape:lg:h-full landscape:lg:justify-around lg:px-10;
+    }
+
+    h2.header-heading{
+      /* sm */
+      @apply text-xl z-40 relative;
+      /* md */
+      @apply md:text-3xl; 
+    }
+
+    h3.header-heading{
+      /* sm */
+      @apply w-64 text-base font-bold z-40 relative;
+      /* md */
+      @apply md:text-2xl md:w-[65%]; 
+    }
+
+    .header-logo{
+      /* sm */
+      @apply w-60 z-10 relative;
+      /* md */
+      @apply md:w-[60%]; 
+      /* lg */
+      @apply landscape:lg:w-[50%]; 
+    }
+
+    .header-container-button{
+      /* sm */
+      @apply flex justify-start w-64 z-40;
+      /* md */
+      @apply md:justify-center md:w-[65%];
+      /* lg */
+      @apply lg:justify-center;
+    }
+    
+    .header-button{
+      /* sm */
+      @apply bg-primary-100 text-black border-2 font-bold border-black py-4 px-7 w-full text-base rounded-full z-10 relative hover:text-primary-100 hover:bg-black hover:border-primary-100;
+      /* md */
+      @apply md:py-8 md:text-3xl md:px-14;
+      /* lg */
+      @apply lg:w-[75%] lg:py-4 landscape:lg:w-max lg:text-base; 
+    }
+  }

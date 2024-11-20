@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .about-wrapper{
+    @apply bg-white;
+  }
+  .about-img{
+    height: 500px;
+    @apply container mx-auto;
+    object-fit: cover;
+  }
+  .about-title{
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply text-black text-5xl font-bold normal-case mx-auto container text-left px-10 bg-[#F2F2F2];
+  }
+  .about-section{
+    @apply text-black;
+  }
+  .about-subtitle{
+    @apply text-black text-3xl not-italic font-bold py-5;
+  }
+  .about-paragraphic{
+    @apply text-black indent-10 text-xl;
+  }
+  .about-section-container{
+    @apply container mx-auto max-w-screen-lg flex flex-col gap-16 py-16;
+  }
+}

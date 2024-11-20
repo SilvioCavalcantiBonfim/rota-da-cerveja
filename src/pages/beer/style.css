@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .brewery-container {
+    @apply container mx-auto min-h-screen;
+  }
+
+  .brewery-background {
+    @apply object-contain opacity-5;
+  }
+
+  .brewery-background-container {
+    background: radial-gradient(circle, #4a556877, #00000000 55%);
+    @apply fixed w-screen h-screen flex items-center justify-center top-0 aspect-logo left-0 -z-50;
+  }
+
+  .brewery-paragraphic {
+    @apply indent-10 text-xl text-justify p-10;
+  }
+
+  .title {
+    @apply flex justify-between;
+  }
+
+  .brewery-social-container {
+    @apply flex gap-2 items-center;
+  }
+
+  .title-container {
+    @apply flex items-center flex-1;
+  }
+
+  .title-container-and-social {
+    @apply flex flex-col gap-2 lg:flex-row justify-normal lg:justify-between flex-1 lg:pr-10;
+  }
+
+  .beer-container {
+    @apply p-10 w-1/2 cursor-pointer flex gap-10 flex-wrap;
+  }
+
+  .beer-img-container {
+    @apply block h-[calc(100vh-186px)] aspect-beer;
+  }
+
+  .beer-img-container img {
+    @apply object-contain w-full;
+  }
+
+  .beer-content-container {
+    @apply flex;
+  }
+
+  .beer-content {
+    @apply flex-1;
+  }
+
+  .beer-content p {
+    @apply block h-1/4 py-10 indent-10 text-xl text-justify;
+  }
+
+  .info{
+    @apply flex gap-10;
+  }
+
+  .table-info-container {
+    @apply grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 grid-rows-5 max-w-[50%];
+  }
+
+  .table-title {
+    @apply uppercase font-bold;
+  }
+
+  .info-container {
+    @apply flex items-center gap-10 p-1;
+  }
+
+  .table-info {
+    @apply text-primary-100 font-bold;
+  }
+
+  .glass-container{
+    @apply flex h-[152px];
+  }
+
+  .glass-container p {
+    @apply h-auto py-0;
+  }
+
+  .glass-image-container{
+    @apply block h-full aspect-mini-glass;
+  }
+  .glass-image-container img{
+    @apply w-full;
+  }
+
+  .beer-content ul {
+    @apply grid grid-cols-4 text-primary-100 uppercase font-bold list-disc;
+  }
+
+  
+}

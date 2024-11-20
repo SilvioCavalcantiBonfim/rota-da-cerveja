@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .footer-wrapper {
+    @apply flex flex-col relative;
+  }
+  .footer-delivery{
+    @apply flex justify-around container mx-auto border-b border-black p-6;
+  }
+  .footer-infos{
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply grid grid-cols-4 container mx-auto pt-5;
+  }
+  .footer-info-col{
+    @apply flex flex-col gap-4; 
+  }
+  .footer-info-col button{
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply text-black capitalize font-bold px-5 py-3 border-black border-2 hover:bg-black hover:text-primary-100 transition-all rounded-full w-max;
+  }
+  .footer-info-col a{
+    @apply hover:text-black;
+  }
+  .footer-info-col a, .footer-info-col span {
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply text-tundora text-sm;
+  }
+  .footer-infos h2{
+    @apply text-sm font-bold text-black not-italic;
+  }
+
+  .footer-container{
+    @apply bg-primary-100;
+  }
+  .footer-reserved-rights-wrapper{
+    @apply bg-white w-full flex flex-col items-center;
+  }
+  .footer-reserved-rights-container{
+    @apply container mx-auto;
+  }
+  .footer-reserved-rights-container h1 {
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply text-tundora text-sm p-0 pt-2 align-middle font-normal;
+  }
+
+  .footer-reserved-rights-container p {
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply text-gray text-xs py-5 text-center;
+  }
+
+  .footer-social-container{
+    @apply flex gap-5 items-center;
+  }
+  .footer-info-col img{
+    @apply w-[50%]
+  }
+}

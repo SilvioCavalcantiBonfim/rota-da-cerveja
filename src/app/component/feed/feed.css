@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .feed-wrapper {
+    background: radial-gradient(circle, #4a5568, #000000 55%);
+    @apply container mb-10 max-w-[40vw] p-10 flex flex-col;
+  }
+  .feed-container{
+    @apply container mx-auto max-h-[50vh] my-10 overflow-y-hidden;
+  }
+  .feed-viewport{
+    @apply w-full flex flex-col-reverse;
+  }
+}

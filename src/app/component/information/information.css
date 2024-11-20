@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .information ul {
+    @apply text-black indent-10 text-xl list-disc;
+  }
+
+  .information li {
+    @apply pb-5;
+  }
+}

@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  border: 0;
+  padding: 0;
+  outline: 0;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  *{
+    font-family: "Inter", sans-serif;
+    @apply scroll-smooth;
+  }
+  button{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: all .3s;
+  }
+
+  h1{
+    @apply text-3xl capitalize text-center py-10 tracking-wider font-black text-white lg:text-4xl;
+  }
+
+  h2{
+    font-size: 2.375rem;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  h3{
+    font-size: 1.25rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 23px;
+  }
+}
+@layer components{
+  .subtitle{
+    @apply text-black text-3xl not-italic font-bold py-5;
+  }
+  .title{
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply text-black text-5xl font-bold normal-case mx-auto container text-left px-10 bg-[#F2F2F2];
+  }
+  .title-img{
+    @apply container mx-auto bg-primary-100 min-h-[500px] block aspect-banner bg-cover bg-center;
+  }
+  .goto{
+    @apply bg-primary-100 text-black p-2 fixed bottom-11 right-10 shadow-stripe transition-all rounded-full animate-bounce border-2 border-black hover:text-primary-100 hover:bg-black;
+  }
+}

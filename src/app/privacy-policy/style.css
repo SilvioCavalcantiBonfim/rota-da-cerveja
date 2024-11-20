@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .privacy-policy-wrapper{
+    @apply w-full bg-white;
+  }
+  .privacy-policy-container{
+    @apply container mx-auto flex flex-wrap gap-8 gap-y-8 justify-center;
+  }
+  .privacy-policy-title{
+    font-family: 'Trebuchet MS', sans-serif;
+    @apply text-black text-5xl font-bold normal-case mx-auto container text-left px-10 bg-[#F2F2F2];
+  }
+  .privacy-policy-wrapper p{
+    @apply text-black indent-10 text-xl container mx-auto my-8;
+  }
+  .info-container{
+    @apply w-5/12;
+  }
+}

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .recommendation-wrapper {
+    background: radial-gradient(circle, #4a5568, #000000 55%);
+    @apply flex flex-wrap w-full p-10 justify-center;
+  }
+}

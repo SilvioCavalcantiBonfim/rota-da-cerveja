@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .beer-card {
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(87, 78, 78, 0.1);
+    min-width: 320px;
+    max-width: 320px;
+    @apply block bg-black w-full transition-all;
+  }
+
+  .beer-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .beer-description {
+    @apply text-gray;
+  }
+
+  .beer-image {
+    border-radius: 4px;
+    margin-top: 1rem;
+    filter:drop-shadow(rgba(255, 255, 255, 1) 0px 1px 0px);
+    @apply object-cover h-full transition-all;
+  }
+  
+  .beer-card:hover .beer-image{
+    filter:drop-shadow(rgba(255, 255, 255, 0.5) 0px 1px 25px);
+  }
+  
+  .beer-card-image-contanier {
+    @apply h-56 flex justify-center items-center transition-all;
+  }
+}

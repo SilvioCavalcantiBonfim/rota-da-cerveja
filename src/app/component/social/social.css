@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .social-link{
+    @apply cursor-pointer rounded-full block bg-transparent w-10 h-10;
+  }
+  .social-link:hover .social-svg{
+    @apply bg-black fill-primary-100;
+  }
+  .social-svg{
+    @apply fill-black border-2 border-black rounded-full p-2 aspect-square w-10 h-10;
+  }
+}

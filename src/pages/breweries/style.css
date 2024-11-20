@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .brewery-container {
+    @apply container mx-auto min-h-screen;
+  }
+
+  .brewery-background {
+    @apply object-contain opacity-5;
+  }
+
+  .brewery-background-container {
+    background: radial-gradient(circle, #4a556877, #00000000 55%);
+    @apply fixed w-screen h-screen flex items-center justify-center top-0 aspect-logo left-0 -z-50;
+  }
+
+  .brewery-paragraphic {
+    @apply indent-10 text-xl text-justify p-10;
+  }
+
+  .title {
+    @apply flex justify-between bg-white px-0 py-0 relative;
+  }
+
+  .brewery-social-container {
+    @apply flex gap-2 items-center;
+  }
+
+  .title-container {
+    @apply flex items-center flex-1;
+  }
+
+  .title-container-and-social {
+    @apply flex flex-col gap-2 lg:flex-row justify-normal lg:justify-between flex-1 lg:pr-10;
+  }
+
+  .beer-container {
+    @apply p-10 w-1/2 cursor-pointer flex gap-10 flex-wrap;
+  }
+
+  .embla {
+    max-width: 50vw;
+    /* margin: auto; */
+    --slide-height: 19rem;
+    --slide-spacing: 1rem;
+    --slide-size: 100%;
+  }
+
+  .embla__viewport {
+    overflow: hidden;
+  }
+
+  .embla__container {
+    backface-visibility: hidden;
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+  .embla__image__contanier img{
+    @apply transition-all;
+  }
+  .embla__slide:hover .embla__image__contanier img{
+    filter:drop-shadow(rgba(255, 255, 255, 0.5) 0px 1px 25px);
+  }
+
+  .embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    @apply flex h-96 items-center cursor-pointer;
+  }
+
+  .embla__image__contanier{
+    @apply h-96;
+  }
+
+  .embla__image__contanier img{
+    @apply h-96;
+  }
+
+  .embla__slide__number {
+    box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+    border-radius: 1.8rem;
+    font-size: 4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--slide-height);
+  }
+
+  .content-container{
+    @apply flex items-center;
+  }
+
+  .content-container img{
+    @apply p-10;
+  }
+
+}

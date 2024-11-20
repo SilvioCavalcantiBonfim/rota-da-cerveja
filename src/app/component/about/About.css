@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .about-wrapper {
+        @apply bg-[#dfdfdf] py-16 w-full min-h-screen relative flex flex-col items-center;
+    }
+
+    .about-title {
+        @apply text-3xl capitalize text-center py-5 tracking-wider font-black text-black lg:text-4xl;
+    }
+
+    .about-container {
+        @apply   gap-6 flex justify-around flex-1 flex-wrap;
+    }
+    /* md:[&>*:nth-child(2n)]:flex-row-reverse */
+    .about-paragraph-container {
+        @apply text-white flex mx-auto container shadow-stripe rounded-lg items-center flex-col-reverse md:flex-row max-w-screen-md max-h-[250px];
+    }
+
+    .about-image {
+        @apply drop-shadow-xl w-[250px] h-[250px] bg-white rounded-r-lg;
+    }
+
+    .about-description {
+        @apply block md:text-left md:indent-10 text-center flex-1 text-base h-full bg-primary-900;
+    }
+
+}
