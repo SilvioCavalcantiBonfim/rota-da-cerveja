@@ -6,7 +6,7 @@ const handle = async (req: NextApiRequest, res: NextApiResponse) => {
 
     // Verifica se estamos em ambiente de desenvolvimento ou produção
     const isDev = process.env.NODE_ENV === 'development';
-    const baseUri = isDev ? 'http://localhost:3000/images' : `${process.env.STORAGE_URI}/images`;
+    const baseUri = isDev ? 'http://localhost:3000/images' : `https://rota-da-cerveja.vercel.app/images`;//`${process.env.STORAGE_URI}/images`;
 
     const uri = `${baseUri}/${type}/${color ? `${color}/` : ''}${name}.${format}`;
 
