@@ -92,7 +92,7 @@
   }
 
   .content-container{
-    @apply flex items-center;
+    @apply flex items-center flex-col lg:flex-row;
   }
 
   .content-container img{

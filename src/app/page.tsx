@@ -44,7 +44,7 @@ export default async function Home() {
   return (<>
     <Header></Header>
     <Carousel slides={content.breweries} options={OPTIONS}></Carousel>
-    <div className="flex">
+    <div className="flex flex-col lg:flex-row">
       <Feed></Feed>
       <Recommendation beers={content.beers}></Recommendation>
     </div>

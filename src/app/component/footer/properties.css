@@ -5,13 +5,13 @@
 @layer components {
   .properties-wrapper{
     
-    @apply flex text-black w-full gap-3 align-top max-w-64 items-center;
+    @apply flex text-black w-full gap-3 align-top lg:max-w-64 items-center;
   }
   .properties-info{
-    @apply max-w-[400px] h-min;
+    @apply lg:max-w-[400px] lg:h-min w-full;
   }
   .properties-wrapper img{
-    @apply w-12 h-12;
+    @apply w-6 h-6;
   }
   .properties-info h1{
     font-family: 'Trebuchet MS', sans-serif;

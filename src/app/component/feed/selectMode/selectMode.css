@@ -4,7 +4,7 @@
 
 @layer components {
   .select-container{
-    @apply block w-[460px] h-16 bg-primary-100 rounded-full shadow-inner mx-auto cursor-pointer p-2 relative;
+    @apply block w-full max-w-[460px] h-16 bg-primary-100 rounded-full shadow-inner mx-auto cursor-pointer p-2 relative;
   }
   .selector{
     @apply block w-1/2 h-full bg-black rounded-full shadow-selector relative transition-all;

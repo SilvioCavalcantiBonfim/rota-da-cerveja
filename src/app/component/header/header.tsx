@@ -11,7 +11,7 @@ export function Header () {
         <h2 className="header-heading">
           As melhores cervejas artesanais da sua região!
         </h2> 
-        <Image src="/api/image?name=logo&type=public" alt="Logo" className="header-logo" width={240} height={144}></Image>
+        <Image src="/api/image?name=logo&type=public " alt="Logo" className="header-logo" width={240} height={144}></Image>
         <h3 className="header-heading">
           O aplicativo desenvolvido para você ter a melhor experiência cervejeira.
         </h3>

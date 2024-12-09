@@ -8,14 +8,17 @@
     @apply flex flex-col relative;
   }
   .footer-delivery{
-    @apply flex justify-around container mx-auto border-b border-black p-6;
+    @apply flex flex-col lg:flex-row gap-5 lg:justify-around lg:gap-0 container mx-auto border-b border-black p-10 lg:p-6;
   }
   .footer-infos{
     font-family: 'Trebuchet MS', sans-serif;
-    @apply grid grid-cols-4 container mx-auto pt-5;
+    @apply grid grid-rows-4 lg:grid-rows-none lg:grid-cols-4 container mx-auto pt-5 justify-items-center lg:justify-items-start;
+  }
+  .footer-infos>*{
+    @apply text-center lg:text-left;
   }
   .footer-info-col{
-    @apply flex flex-col gap-4; 
+    @apply flex lg:text-left text-center flex-col gap-4 lg:items-start items-center; 
   }
   .footer-info-col button{
     font-family: 'Trebuchet MS', sans-serif;
