@@ -40,7 +40,7 @@ export function Footer() {
         </div>
         <div className="footer-info-col">
           <h2>Ajuda</h2>
-          <a href="" className="cursor-not-allowed">Minha Conta</a>
+          <a href="https://souza-tacy.github.io/inicio.rota/" className="cursor-not-allowed">Minha Conta</a>
           <a href="" className="cursor-not-allowed">Meus Pedidos</a>
           <a href="" className="cursor-not-allowed">Pagamentos</a>
           <a href="" className="cursor-not-allowed">Eventos</a>
